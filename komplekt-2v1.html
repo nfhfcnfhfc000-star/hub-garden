@@ -79,8 +79,8 @@ src="https://www.facebook.com/tr?id=1818271219352394&ev=PageView&noscript=1"
       <span class="pill pill-sale">Акційна ціна</span>
       <h3>Комплект 2-в-1<br>мінипила + секатор</h3>
       <div class="price-row">
-        <span class="price-old">3 799 грн</span>
-        <span class="price-new">2 999 грн</span>
+        <span class="price-old">2 999 грн</span>
+        <span class="price-new">2 499 грн</span>
         <span class="stock-flag">✓ В наявності</span>
       </div>
 
@@ -221,8 +221,8 @@ src="https://www.facebook.com/tr?id=1818271219352394&ev=PageView&noscript=1"
     <div class="kit-price-card">
       <h3>Готові до роботи одразу після отримання!</h3>
       <div class="price-row">
-        <span class="price-old">3 799 грн</span>
-        <span class="price-new">2 999 грн</span>
+        <span class="price-old">2 999 грн</span>
+        <span class="price-new">2 499 грн</span>
       </div>
       <p class="stock-flag">✓ Є в наявності</p>
       <a href="#замовити" class="btn btn-primary btn-block">Замовити зараз →</a>
@@ -451,9 +451,15 @@ src="https://www.facebook.com/tr?id=1818271219352394&ev=PageView&noscript=1"
       + '?chat_id=' + encodeURIComponent(chatId)
       + '&text=' + encodeURIComponent(text);
 
-    return fetch(url).catch(function(err){
-      console.error('Telegram: не вдалося відправити заявку', err);
-    });
+    return fetch(url).then(function(response){
+  if (!response.ok) {
+    throw new Error('Telegram API error');
+  }
+  return response;
+}).catch(function(err){
+  console.error('Telegram: не вдалося відправити заявку', err);
+  throw err;
+});
   }
 
   var orderForm = document.getElementById('orderForm');
@@ -466,9 +472,10 @@ src="https://www.facebook.com/tr?id=1818271219352394&ev=PageView&noscript=1"
         city: orderForm.querySelector('input[name="city"]').value.trim()
       };
       sendOrderToTelegram(data).then(function(){
-        showThankYouModal();
-        orderForm.reset();
-      });
+  fbq('track', 'Lead');
+  showThankYouModal();
+  orderForm.reset();
+});
     });
   }
 
