@@ -453,9 +453,15 @@ src="https://www.facebook.com/tr?id=1765590254373945&ev=PageView&noscript=1"
       + '?chat_id=' + encodeURIComponent(chatId)
       + '&text=' + encodeURIComponent(text);
 
-    return fetch(url).catch(function(err){
-      console.error('Telegram: не вдалося відправити заявку', err);
-    });
+return fetch(url).then(function(response){
+  if (!response.ok) {
+    throw new Error('Telegram API error');
+  }
+  return response;
+}).catch(function(err){
+  console.error('Telegram: не вдалося відправити заявку', err);
+  throw err;
+});
   }
 
   var orderForm = document.getElementById('orderForm');
@@ -468,9 +474,10 @@ src="https://www.facebook.com/tr?id=1765590254373945&ev=PageView&noscript=1"
         city: orderForm.querySelector('input[name="city"]').value.trim()
       };
       sendOrderToTelegram(data).then(function(){
-        showThankYouModal();
-        orderForm.reset();
-      });
+  fbq('track', 'Lead');
+  showThankYouModal();
+  orderForm.reset();
+});
     });
   }
 
