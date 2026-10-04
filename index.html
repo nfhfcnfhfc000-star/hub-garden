@@ -50,6 +50,20 @@ src="https://www.facebook.com/tr?id=1601191345000968&ev=PageView&noscript=1"
   </div>
 </header>
 
+<!-- ===== URGENCY BAR ===== -->
+<div class="urgency-bar">
+  <div class="wrap urgency-inner">
+    <p class="urgency-text">🔥 Знижка діє лише сьогодні — встигніть замовити до підвищення ціни!</p>
+    <div class="countdown" id="countdown">
+      <div class="countdown-cell"><span class="countdown-num" id="cd-h">00</span><small>год</small></div>
+      <span class="countdown-colon">:</span>
+      <div class="countdown-cell"><span class="countdown-num" id="cd-m">00</span><small>хв</small></div>
+      <span class="countdown-colon">:</span>
+      <div class="countdown-cell"><span class="countdown-num" id="cd-s">00</span><small>сек</small></div>
+    </div>
+  </div>
+</div>
+
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="wrap hero-grid">
@@ -83,10 +97,12 @@ src="https://www.facebook.com/tr?id=1601191345000968&ev=PageView&noscript=1"
       <span class="pill pill-sale">Акційна ціна</span>
       <h3>Акумуляторний секатор<br>VOLLYX 21V</h3>
       <div class="price-row">
-        <span class="price-old">1 599 грн</span>
-        <span class="price-new">1 299 грн</span>
+        <span class="price-old">1 799 грн</span>
+        <span class="discount-badge">−16%</span>
+        <span class="price-new">1 499 грн</span>
         <span class="stock-flag">✓ В наявності</span>
       </div>
+      <p class="stock-counter">Залишилось <strong>7</strong> шт за акційною ціною</p>
 
       <div class="field-group">
         <span class="field-label">Колір</span>
@@ -109,7 +125,7 @@ src="https://www.facebook.com/tr?id=1601191345000968&ev=PageView&noscript=1"
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           <input type="text" name="city" placeholder="Місто / відділення" required>
         </label>
-        <button type="submit" class="btn btn-primary btn-block">Замовити зараз →</button>
+        <button type="submit" class="btn btn-primary btn-block btn-pulse">Замовити зараз →</button>
       </form>
       <p class="privacy-note">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -228,11 +244,13 @@ src="https://www.facebook.com/tr?id=1601191345000968&ev=PageView&noscript=1"
     <div class="kit-price-card">
       <h3>Готові до роботи одразу після отримання!</h3>
       <div class="price-row">
-        <span class="price-old">1 599 грн</span>
-        <span class="price-new">1 299 грн</span>
+        <span class="price-old">1 799 грн</span>
+        <span class="discount-badge">−16%</span>
+        <span class="price-new">1 499 грн</span>
       </div>
       <p class="stock-flag">✓ Є в наявності</p>
-      <a href="#замовити" class="btn btn-primary btn-block">Замовити зараз →</a>
+      <p class="stock-counter">Залишилось <strong>7</strong> шт за акційною ціною</p>
+      <a href="#замовити" class="btn btn-primary btn-block btn-pulse">Замовити зараз →</a>
       <p class="privacy-note">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         Ваші дані під захистом. Використовуються лише для оформлення замовлення.
@@ -294,10 +312,41 @@ src="https://www.facebook.com/tr?id=1601191345000968&ev=PageView&noscript=1"
   </div>
 </section>
 
+<!-- ===== HOW TO ORDER ===== -->
+<section class="section how-section">
+  <div class="wrap">
+    <h2 class="center">Як замовити</h2>
+    <div class="how-grid">
+      <div class="how-step">
+        <span class="how-num">1</span>
+        <h4>Залиште заявку</h4>
+        <p>Заповніть коротку форму — ім'я та телефон, це займе 20 секунд.</p>
+      </div>
+      <div class="how-step">
+        <span class="how-num">2</span>
+        <h4>Отримайте дзвінок</h4>
+        <p>Наш менеджер зателефонує і підтвердить деталі замовлення.</p>
+      </div>
+      <div class="how-step">
+        <span class="how-num">3</span>
+        <h4>Оплатіть при отриманні</h4>
+        <p>Доставка Новою Поштою по всій Україні, оплата лише після отримання.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== REVIEWS ===== -->
 <section class="section reviews-section" id="відгуки">
   <div class="wrap">
     <div class="reviews-head">
+      <div class="rating-summary">
+        <span class="rating-number">4.9</span>
+        <div class="rating-stars-block">
+          <div class="rating-stars">★★★★★</div>
+          <span class="rating-count">на основі 5 відгуків</span>
+        </div>
+      </div>
       <h2>«Для саду, де роботи завжди більше, ніж здається»</h2>
       <p class="muted">Зібрали найважливіше в одному комплекті, щоб ви могли взяти секатор і одразу перейти до роботи.</p>
     </div>
@@ -378,7 +427,7 @@ src="https://www.facebook.com/tr?id=1601191345000968&ev=PageView&noscript=1"
           <img src="img/2v1.png" alt="Комплект 2-в-1">
         </div>
         <p class="upsell-name">Комплект 2-в-1 (мінипила + секатор)</p>
-        <p class="upsell-price">2 499 грн</p>
+        <p class="upsell-price">2 999 грн</p>
         <!-- ВСТАВТЕ СЮДИ ПОСИЛАННЯ НА ТОВАР В href -->
         <a href="komplekt-2v1.html" class="btn btn-outline btn-sm upsell-link">Переглянути</a>
       </div>
@@ -484,16 +533,9 @@ src="https://www.facebook.com/tr?id=1601191345000968&ev=PageView&noscript=1"
       + '?chat_id=' + encodeURIComponent(chatId)
       + '&text=' + encodeURIComponent(text);
 
-return fetch(url).then(function(response){
-  if (!response.ok) {
-    throw new Error('Telegram API error: HTTP ' + response.status);
-  }
-
-  return response;
-}).catch(function(err){
-  console.error('Telegram: не вдалося відправити заявку', err);
-  throw err;
-});
+    return fetch(url).catch(function(err){
+      console.error('Telegram: не вдалося відправити заявку', err);
+    });
   }
 
   /* ---- Order form submit: send to Telegram + show thank-you modal ---- */
@@ -576,6 +618,43 @@ return fetch(url).then(function(response){
   }, 23000);
 
   closeBtn.addEventListener('click', hideToast);
+})();
+</script>
+
+<script>
+(function(){
+  var elH = document.getElementById('cd-h');
+  var elM = document.getElementById('cd-m');
+  var elS = document.getElementById('cd-s');
+  if(!elH||!elM||!elS) return;
+
+  function pad(n){ return String(n).padStart(2,'0'); }
+
+  function getTarget(){
+    var t = new Date();
+    t.setHours(24,0,0,0); // відлік до найближчої півночі
+    return t;
+  }
+
+  var target = getTarget();
+
+  function tick(){
+    var now = new Date();
+    var diff = target - now;
+    if (diff <= 0){
+      target = getTarget();
+      diff = target - now;
+    }
+    var h = Math.floor(diff / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    elH.textContent = pad(h);
+    elM.textContent = pad(m);
+    elS.textContent = pad(s);
+  }
+
+  tick();
+  setInterval(tick, 1000);
 })();
 </script>
 

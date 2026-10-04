@@ -51,6 +51,20 @@ src="https://www.facebook.com/tr?id=1818271219352394&ev=PageView&noscript=1"
   </div>
 </header>
 
+<!-- ===== URGENCY BAR ===== -->
+<div class="urgency-bar">
+  <div class="wrap urgency-inner">
+    <p class="urgency-text">🔥 Знижка діє лише сьогодні — встигніть замовити до підвищення ціни!</p>
+    <div class="countdown" id="countdown">
+      <div class="countdown-cell"><span class="countdown-num" id="cd-h">00</span><small>год</small></div>
+      <span class="countdown-colon">:</span>
+      <div class="countdown-cell"><span class="countdown-num" id="cd-m">00</span><small>хв</small></div>
+      <span class="countdown-colon">:</span>
+      <div class="countdown-cell"><span class="countdown-num" id="cd-s">00</span><small>сек</small></div>
+    </div>
+  </div>
+</div>
+
 <!-- ===== HERO ===== -->
 <section class="hero">
   <div class="wrap hero-grid">
@@ -79,10 +93,12 @@ src="https://www.facebook.com/tr?id=1818271219352394&ev=PageView&noscript=1"
       <span class="pill pill-sale">Акційна ціна</span>
       <h3>Комплект 2-в-1<br>мінипила + секатор</h3>
       <div class="price-row">
-        <span class="price-old">2 999 грн</span>
-        <span class="price-new">2 499 грн</span>
+        <span class="price-old">3 799 грн</span>
+        <span class="discount-badge">−21%</span>
+        <span class="price-new">2 999 грн</span>
         <span class="stock-flag">✓ В наявності</span>
       </div>
+      <p class="stock-counter">Залишилось <strong>5</strong> шт за акційною ціною</p>
 
       <form class="order-form" id="orderForm">
         <label class="field">
@@ -97,7 +113,7 @@ src="https://www.facebook.com/tr?id=1818271219352394&ev=PageView&noscript=1"
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           <input type="text" name="city" placeholder="Місто / відділення" required>
         </label>
-        <button type="submit" class="btn btn-primary btn-block">Замовити зараз →</button>
+        <button type="submit" class="btn btn-primary btn-block btn-pulse">Замовити зараз →</button>
       </form>
       <p class="privacy-note">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -221,11 +237,13 @@ src="https://www.facebook.com/tr?id=1818271219352394&ev=PageView&noscript=1"
     <div class="kit-price-card">
       <h3>Готові до роботи одразу після отримання!</h3>
       <div class="price-row">
-        <span class="price-old">2 999 грн</span>
-        <span class="price-new">2 499 грн</span>
+        <span class="price-old">3 799 грн</span>
+        <span class="discount-badge">−21%</span>
+        <span class="price-new">2 999 грн</span>
       </div>
       <p class="stock-flag">✓ Є в наявності</p>
-      <a href="#замовити" class="btn btn-primary btn-block">Замовити зараз →</a>
+      <p class="stock-counter">Залишилось <strong>5</strong> шт за акційною ціною</p>
+      <a href="#замовити" class="btn btn-primary btn-block btn-pulse">Замовити зараз →</a>
       <p class="privacy-note">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         Ваші дані під захистом. Використовуються лише для оформлення замовлення.
@@ -278,10 +296,41 @@ src="https://www.facebook.com/tr?id=1818271219352394&ev=PageView&noscript=1"
   </div>
 </section>
 
+<!-- ===== HOW TO ORDER ===== -->
+<section class="section how-section">
+  <div class="wrap">
+    <h2 class="center">Як замовити</h2>
+    <div class="how-grid">
+      <div class="how-step">
+        <span class="how-num">1</span>
+        <h4>Залиште заявку</h4>
+        <p>Заповніть коротку форму — ім'я та телефон, це займе 20 секунд.</p>
+      </div>
+      <div class="how-step">
+        <span class="how-num">2</span>
+        <h4>Отримайте дзвінок</h4>
+        <p>Наш менеджер зателефонує і підтвердить деталі замовлення.</p>
+      </div>
+      <div class="how-step">
+        <span class="how-num">3</span>
+        <h4>Оплатіть при отриманні</h4>
+        <p>Доставка Новою Поштою по всій Україні, оплата лише після отримання.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== REVIEWS ===== -->
 <section class="section reviews-section" id="відгуки">
   <div class="wrap">
     <div class="reviews-head">
+      <div class="rating-summary">
+        <span class="rating-number">4.9</span>
+        <div class="rating-stars-block">
+          <div class="rating-stars">★★★★★</div>
+          <span class="rating-count">на основі 3 відгуків</span>
+        </div>
+      </div>
       <h2>«Все, що треба для саду, в одній коробці»</h2>
       <p class="muted">Найвигідніший спосіб зібрати повний набір інструментів VOLLYX одразу.</p>
     </div>
@@ -451,15 +500,9 @@ src="https://www.facebook.com/tr?id=1818271219352394&ev=PageView&noscript=1"
       + '?chat_id=' + encodeURIComponent(chatId)
       + '&text=' + encodeURIComponent(text);
 
-    return fetch(url).then(function(response){
-  if (!response.ok) {
-    throw new Error('Telegram API error');
-  }
-  return response;
-}).catch(function(err){
-  console.error('Telegram: не вдалося відправити заявку', err);
-  throw err;
-});
+    return fetch(url).catch(function(err){
+      console.error('Telegram: не вдалося відправити заявку', err);
+    });
   }
 
   var orderForm = document.getElementById('orderForm');
@@ -472,10 +515,9 @@ src="https://www.facebook.com/tr?id=1818271219352394&ev=PageView&noscript=1"
         city: orderForm.querySelector('input[name="city"]').value.trim()
       };
       sendOrderToTelegram(data).then(function(){
-  fbq('track', 'Lead');
-  showThankYouModal();
-  orderForm.reset();
-});
+        showThankYouModal();
+        orderForm.reset();
+      });
     });
   }
 
@@ -508,6 +550,43 @@ src="https://www.facebook.com/tr?id=1818271219352394&ev=PageView&noscript=1"
   }, 23000);
 
   closeBtn.addEventListener('click', hideToast);
+})();
+</script>
+
+<script>
+(function(){
+  var elH = document.getElementById('cd-h');
+  var elM = document.getElementById('cd-m');
+  var elS = document.getElementById('cd-s');
+  if(!elH||!elM||!elS) return;
+
+  function pad(n){ return String(n).padStart(2,'0'); }
+
+  function getTarget(){
+    var t = new Date();
+    t.setHours(24,0,0,0); // відлік до найближчої півночі
+    return t;
+  }
+
+  var target = getTarget();
+
+  function tick(){
+    var now = new Date();
+    var diff = target - now;
+    if (diff <= 0){
+      target = getTarget();
+      diff = target - now;
+    }
+    var h = Math.floor(diff / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    elH.textContent = pad(h);
+    elM.textContent = pad(m);
+    elS.textContent = pad(s);
+  }
+
+  tick();
+  setInterval(tick, 1000);
 })();
 </script>
 
